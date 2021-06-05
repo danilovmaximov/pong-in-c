@@ -1,15 +1,11 @@
 /*******************************************************************
-  Project main function template for MicroZed based MZ_APO board
-  designed by Petr Porazil at PiKRON
+  Game of pong in C for MZ_APO.
 
-  change_me.c      - main file
+  start.c      - main file
 
-  include your name there and license for distribution.
-
-  Remove next text: This line should not appear in submitted
-  work and project name should be change to match real application.
-  If this text is there I want 10 points subtracted from final
-  evaluation.
+  (C) Copyright 2021 by Danil Maksimov
+  e-mail: maksidan@fel.cvut.cz
+  license: any combination of GPL, LGPL, MPL or BSD licenses
 
  *******************************************************************/
 
