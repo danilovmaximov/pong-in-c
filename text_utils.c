@@ -50,7 +50,7 @@ int string_width(char *str)
 
     while (str[i] != '\0') 
     {
-        result += charWidth(str[i]);
+        result += char_width(str[i]);
         i++;
     }
     return result;
@@ -68,7 +68,7 @@ void draw_pixel(int x, int y, unsigned short color)
 /*
  *  Regulate character's scale
  */
-void draw_pixel_big(int x, int y, unsigned short color) 
+void draw_pixel_big(int x, int y, u_int16_t color, int scale) 
 {
     int i, j;
     for (i = 0; i < scale; i++) 
@@ -86,7 +86,7 @@ void draw_pixel_big(int x, int y, unsigned short color)
  *  int x, y  -  coordinates fo the upper left corner of the character
  *  char ch  -  the character or it's code from the font table
  */
-void draw_char(int x, int y, char ch, unsigned short color) 
+void draw_char(int x, int y, char ch, u_int16_t color, int scale) 
 {
     int w = char_width(ch);
     const font_bits_t *ptr;
@@ -109,7 +109,7 @@ void draw_char(int x, int y, char ch, unsigned short color)
             {
                 if ((val &0x8000) != 0) 
                 {
-                    draw_pixel_big(x + scale * j, y + scale * i, color);
+                    draw_pixel_big(x + scale * j, y + scale * i, color, scale);
                 }
                 val <<= 1;
             }
@@ -127,14 +127,14 @@ void draw_char(int x, int y, char ch, unsigned short color)
 void draw_string(int x, int y, 
                  char *str, 
                  int scale, int kerning,
-                 uint16_t color) 
+                 u_int16_t color) 
 {
     int concatinated = 0;
 
     while (*str != '\0') 
     {
-        draw_сhar(x + (concatinated), y, *(str), color, scale);
-        concatinated += (char_width(*(str)) + kerning) * scale;
+        draw_char(x + concatinated, y, *str, color, scale);
+        concatinated += (char_width(*str) + kerning) * scale;
         str++;
     }
 }
