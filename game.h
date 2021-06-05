@@ -23,6 +23,11 @@
 #define SCORE_SCALE 5
 #define SCORE_WIDTH 18
 
+#define SCORE_AIM 10
+#define PLAYER_1 1
+#define PLAYER_2 2
+#define INIT_SCORE 0
+
 int p1_score, p2_score;
 
 void update_gamefield();
@@ -30,5 +35,7 @@ void update_gamefield();
 void render_gamefield();
 
 void render_score();
+
+void update_score(int side);
 
 #endif

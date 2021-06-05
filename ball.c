@@ -105,12 +105,12 @@ void update_ball()
         break;
     
     case LEFT_OUT_OF_BOUNDS:
-        // TODO: update score
+        update_score(PLAYER_2);
         out_of_bounds = true;
         break;
 
     case RIGHT_OUT_OF_BOUNDS:
-        // TODO: update score
+        update_score(PLAYER_1);
         out_of_bounds = true;
         break;
 

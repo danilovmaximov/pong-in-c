@@ -16,6 +16,8 @@
 int state, scale;
 bool in_state_transition;
 
+int winner;
+
 struct timespec delay;
 
 void update(int* state);

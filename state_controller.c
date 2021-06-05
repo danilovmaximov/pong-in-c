@@ -3,6 +3,8 @@
 int state, scale;
 bool in_state_transition = true;
 
+int winner = 0;
+
 int countdown;
 
 struct timespec delay =
@@ -26,6 +28,10 @@ void update(int* state)
         case RUNNING:
             update_gamefield();
             break;
+
+        case END:
+            update_end_screen();
+            break;
     }
 }
 
@@ -46,6 +52,9 @@ void render(int* state)
         case RUNNING:
             render_gamefield();
             break;
+
+        case END:
+            render_end_screen(winner);
     }
 
     render_screen_data(parlcd_mem_base);

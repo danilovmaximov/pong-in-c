@@ -12,6 +12,7 @@
 #include "game_states.h"
 #include "state_controller.h"
 #include "pads.h"
+#include "game.h"
 
 #define BALL_SIZE 15
 
