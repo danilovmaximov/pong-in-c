@@ -12,6 +12,7 @@
 #include "game_states.h"
 #include "state_controller.h"
 #include "pads.h"
+#include "ball.h"
 
 #define SEPARATION_LINE_OFFSET 10
 #define SEPARATION_LINE_WIDTH 2

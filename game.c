@@ -8,6 +8,7 @@ int separation_line_x = DISPLAY_WIDTH / 2 + 2 * SEPARATION_LINE_WIDTH;
 void update_gamefield()
 {
     update_pads();
+    update_ball();
 }
 
 void render_separation_line()
@@ -30,6 +31,7 @@ void render_gamefield()
     render_separation_line();
     render_pads();
     render_score();
+    render_ball();
 }
 
 void render_score()

@@ -5,6 +5,7 @@
 #include <stdbool.h>
 
 #include "params.h"
+#include "text_utils.h"
 #include "mzapo_parlcd.h"
 
 u_int16_t *fb;

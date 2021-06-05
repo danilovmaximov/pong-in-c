@@ -17,6 +17,8 @@
 #define PADS_WIDTH 7
 #define PADS_MOVE_SPEED 30
 
+int pad1_pos, pad2_pos;
+
 void render_pads();
 
 void init_pads();
