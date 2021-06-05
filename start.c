@@ -73,6 +73,9 @@ void periphery_init()
     knobs = (volatile u_int32_t *)(spiled_mem_base + SPILED_REG_KNOBS_8BIT_o);
 }
 
+/*
+ *  Game loop delay initialization
+ */
 void delay_init()
 {
     delay.tv_sec = 0;

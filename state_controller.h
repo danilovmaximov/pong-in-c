@@ -10,6 +10,8 @@
 #include "game_states.h"
 #include "menu.h"
 #include "periphery_utils.h"
+#include "countdown.h"
+#include "game.h"
 
 int state, scale;
 bool in_state_transition;

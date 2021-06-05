@@ -3,6 +3,8 @@
 int state, scale;
 bool in_state_transition = true;
 
+int countdown;
+
 struct timespec delay =
 {
     .tv_sec = 0,
@@ -16,6 +18,14 @@ void update(int* state)
         case MENU:
             update_menu();
             break;
+
+        case READY:
+            countdown = run_countdown();
+            break;
+
+        case RUNNING:
+            update_gamefield();
+            break;
     }
 }
 
@@ -28,7 +38,13 @@ void render(int* state)
         case MENU:
             render_menu();
             break;
+
         case READY:
+            render_countdown(countdown);
+            break;
+
+        case RUNNING:
+            render_gamefield();
             break;
     }
 

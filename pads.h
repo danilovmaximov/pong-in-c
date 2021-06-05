@@ -1,5 +1,5 @@
-#ifndef MENU_H
-#define MENU_H
+#ifndef PADS_H
+#define PADS_H
 
 #include <stdbool.h>
 
@@ -12,17 +12,15 @@
 #include "game_states.h"
 #include "state_controller.h"
 
-#define TITLE_LETTERS_SCALE 10
-#define TITLE_LETTERS_X_OFFSET 120
-#define TITLE_Y_OFFSET 0
+#define PADS_X_OFFSET 10
+#define PADS_HEIGHT 60
+#define PADS_WIDTH 7
+#define PADS_MOVE_SPEED 30
 
-#define MENU_Y_OFFSET 180
-#define MENU_TEXT_SCALE 2
+void render_pads();
 
-void update_menu();
+void init_pads();
 
-void render_menu();
-
-void init_menu();
+void update_pads();
 
 #endif

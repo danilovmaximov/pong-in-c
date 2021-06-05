@@ -8,6 +8,12 @@ u_int8_t new_knob;
 void render_title()
 {
     const char letters[4] = {'P', 'O', 'N', 'G'};
+
+    fill_rect
+    (
+        0, 10, DISPLAY_WIDTH, 130, WHITE
+    );
+
     for (int i = 0; i < 4; i++)
     {
         draw_char
@@ -15,7 +21,7 @@ void render_title()
             i * TITLE_LETTERS_X_OFFSET,
             TITLE_Y_OFFSET,
             letters[i],
-            RED,
+            BLACK,
             TITLE_LETTERS_SCALE
         );
     }
@@ -46,13 +52,13 @@ void render_buttons()
 
 void render_credits()
 {
-    char CREDIT[] = "made by Danil Maksimov";
+    char CGREENIT[] = "made by Danil Maksimov";
 
     draw_string
     (
-        DISPLAY_WIDTH / 2 - string_width(CREDIT) / 2,
+        DISPLAY_WIDTH / 2 - string_width(CGREENIT) / 2,
         MENU_Y_OFFSET * 1.66,
-        CREDIT,
+        CGREENIT,
         MENU_TEXT_SCALE / 2,
         0,
         WHITE
@@ -64,10 +70,10 @@ void render_choice()
     switch (choice)
     {
         case -1:
-            fill_rect(DISPLAY_WIDTH / 2 - string_width("PLAY"), MENU_Y_OFFSET + 30, string_width("PLAY") * 2, 4, WHITE);
+            fill_rect(DISPLAY_WIDTH / 2 - string_width("PLAY"), MENU_Y_OFFSET + 30, string_width("PLAY") * 2, 4, GREEN);
             break;
         case 1:
-            fill_rect(DISPLAY_WIDTH / 2 - string_width("EXIT"), MENU_Y_OFFSET * 1.33 + 30, string_width("EXIT") * 2, 4, WHITE);
+            fill_rect(DISPLAY_WIDTH / 2 - string_width("EXIT"), MENU_Y_OFFSET * 1.33 + 30, string_width("EXIT") * 2, 4, GREEN);
             break;
     }
 }

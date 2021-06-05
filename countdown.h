@@ -1,5 +1,5 @@
-#ifndef MENU_H
-#define MENU_H
+#ifndef COUNTDOWN_H
+#define COUNTDOWN_H
 
 #include <stdbool.h>
 
@@ -11,18 +11,14 @@
 #include "periphery_utils.h"
 #include "game_states.h"
 #include "state_controller.h"
+#include "pads.h"
 
-#define TITLE_LETTERS_SCALE 10
-#define TITLE_LETTERS_X_OFFSET 120
-#define TITLE_Y_OFFSET 0
+#define REAL_COUNTDOWN_LENGTH 60
+#define COUNTDOWN_BASE 9
+#define USER_COUNTDOWN_LENGTH 3
 
-#define MENU_Y_OFFSET 180
-#define MENU_TEXT_SCALE 2
+int run_countdown();
 
-void update_menu();
-
-void render_menu();
-
-void init_menu();
+void render_countdown(int cur_countdown);
 
 #endif
