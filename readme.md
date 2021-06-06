@@ -20,18 +20,18 @@ This is a replica of Pong game originally made in 1972 by Atari. Made as a semes
 
 ### Menu
 
-Markup : - Spin the green knob to choose between "Play" and "Exit".
-         - Press the green knob with "Play" chosen to start the game.
-         - Press the green knob with "Exit" chosen to quit the game.
+- Spin the green knob to choose between "Play" and "Exit".
+- Press the green knob with "Play" chosen to start the game.
+- Press the green knob with "Exit" chosen to quit the game.
 
 ### Game
 
-Markup : - Spin the red knob to control the red pad and blue knob to control the blue pad.
-         - Press the green knob to pause the game. Progress will be saved.
+- Spin the red knob to control the red pad and blue knob to control the blue pad.
+- Press the green knob to pause the game. Progress will be saved.
 
 ### End screen
 
-Markup : - Press the green knob to go to the menu.
+- Press the green knob to go to the menu.
 
 # Documentation
 
