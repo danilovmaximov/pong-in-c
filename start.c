@@ -82,6 +82,22 @@ void delay_init()
     delay.tv_nsec = 17 * 1000 * 1000;
 }
 
+void init_periphery() 
+{
+    uint8_t *spiled_mem_base = map_phys_address(SPILED_REG_BASE_PHYS, SPILED_REG_SIZE, 0);
+
+    if (spiled_mem_base == NULL) 
+    {
+        fprintf(stderr, "Failed to initialize periphery\n");
+        exit(1);
+    }
+
+    led_line = (volatile uint32_t *)(spiled_mem_base + SPILED_REG_LED_LINE_o);
+    rgb_led1 = (volatile uint32_t *)(spiled_mem_base + SPILED_REG_LED_RGB1_o);
+    rgb_led2 = (volatile uint32_t *)(spiled_mem_base + SPILED_REG_LED_RGB2_o);
+    knobs = (volatile uint32_t *)(spiled_mem_base + SPILED_REG_KNOBS_8BIT_o);
+}
+
 /*
  *  Game initialization method
  */
@@ -90,6 +106,7 @@ void init()
     display_init();
     periphery_init();
     delay_init();
+    init_led_snake();
     init_menu();
 }
 
@@ -102,8 +119,7 @@ int main(int argc, char *argv[])
 
     while (true)
     {
-        handle_input();
-
+        get_input();
         update(&state);
         render(&state);
 

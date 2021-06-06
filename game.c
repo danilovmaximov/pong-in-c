@@ -1,7 +1,7 @@
 #include "game.h"
 
-int p1_score = 8;
-int p2_score = 8;
+int p1_score = INIT_SCORE;
+int p2_score = INIT_SCORE;
 
 int separation_line_x = DISPLAY_WIDTH / 2 + 2 * SEPARATION_LINE_WIDTH;
 
@@ -12,20 +12,35 @@ void check_score()
         winner = PLAYER_1;
         p1_score = INIT_SCORE;
         state = END;
+        init_end_led();
     }
     else if (p2_score == 10)
     {
         winner = PLAYER_2;
         p2_score = INIT_SCORE;
         state = END;
+        init_end_led();
     }
+}
+
+void pause_game()
+{
+    state = MENU;
 }
 
 void update_gamefield()
 {
     check_score();
+    update_led();
     update_pads();
     update_ball();
+
+    if (knob_pressed == GREEN_KNOB_PRESSED) 
+    {
+        *rgb_led1 = 0;
+        *rgb_led2 = 0;
+        pause_game();
+    }
 }
 
 void render_separation_line()

@@ -25,7 +25,7 @@ void update(int* state)
             countdown = run_countdown();
             break;
 
-        case RUNNING:
+        case GAME:
             update_gamefield();
             break;
 
@@ -38,7 +38,7 @@ void update(int* state)
 void render(int* state)
 {
     clean_display();
-
+    
     switch(*state)
     {
         case MENU:
@@ -46,10 +46,11 @@ void render(int* state)
             break;
 
         case READY:
+            render_gamefield();
             render_countdown(countdown);
             break;
 
-        case RUNNING:
+        case GAME:
             render_gamefield();
             break;
 
@@ -63,6 +64,11 @@ void render(int* state)
 void quit()
 {
     clean_display();
+    render_screen_data(parlcd_mem_base);
+
+    *led_line = 0;
+    *rgb_led1 = 0;
+    *rgb_led2 = 0;
     free(fb);
     exit(0);
 }

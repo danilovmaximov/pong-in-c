@@ -35,5 +35,13 @@ void render_end_screen(int winner)
 
 void update_end_screen()
 {
-    if (knob_pressed == GREEN_KNOB_PRESSED) state = MENU;
+    end_led();
+
+    if (knob_pressed == GREEN_KNOB_PRESSED) 
+    {
+        *led_line = 0;
+        *rgb_led1 = 0;
+        *rgb_led2 = 0;
+        state = MENU;
+    }
 }

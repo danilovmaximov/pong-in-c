@@ -24,7 +24,7 @@ int run_countdown()
         countdown_len = REAL_COUNTDOWN_LENGTH;
         countdown_base = COUNTDOWN_BASE;
         current_countdown = 3;
-        state = RUNNING;
+        state = GAME;
         init_pads();
     }
 

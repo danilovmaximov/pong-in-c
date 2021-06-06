@@ -23,7 +23,7 @@
 #define SCORE_SCALE 5
 #define SCORE_WIDTH 18
 
-#define SCORE_AIM 10
+#define SCORE_AIM 5
 #define PLAYER_1 1
 #define PLAYER_2 2
 #define INIT_SCORE 0

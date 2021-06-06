@@ -105,12 +105,16 @@ void update_ball()
         break;
     
     case LEFT_OUT_OF_BOUNDS:
+        pulse_led(0b001, 2);
         update_score(PLAYER_2);
+
         out_of_bounds = true;
         break;
 
     case RIGHT_OUT_OF_BOUNDS:
+        pulse_led(0b100, 1);
         update_score(PLAYER_1);
+        
         out_of_bounds = true;
         break;
 

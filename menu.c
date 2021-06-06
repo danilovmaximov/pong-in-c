@@ -89,6 +89,7 @@ void render_menu()
 void update_menu()
 {
     new_knob = green_knob;
+    led_snake();
     
     int update = old_knob - green_knob;
     if (update != 0) 
@@ -102,6 +103,7 @@ void update_menu()
         switch (choice)
         {
         case -1:
+            *led_line = 0;
             state = READY;
             break;
         case 1:

@@ -42,11 +42,23 @@ void render_screen_data(u_int8_t *parlcd_mem_base);
 /*
  *  Function for handling knobs input
  */
-void handle_input();
+void get_input();
 
 /*
  *  Method for drawing a rectangle
  */
 void fill_rect(int x, int y, int width, int height, u_int16_t color);
+
+void pulse_led(uint8_t color, uint8_t led);
+
+void update_led();
+
+void led_snake();
+
+void init_led_snake();
+
+void init_end_led();
+
+void end_led();
 
 #endif

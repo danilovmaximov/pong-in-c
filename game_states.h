@@ -5,8 +5,7 @@ enum game_states
 { 
     MENU,
     READY,
-    RUNNING,
-    PAUSE,
+    GAME,
     END
 };
 
