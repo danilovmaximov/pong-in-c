@@ -3,9 +3,6 @@
 
 #include <stdbool.h>
 
-#include "mzapo_parlcd.h"
-#include "mzapo_phys.h"
-#include "mzapo_regs.h"
 #include "text_utils.h"
 #include "params.h"
 #include "periphery_utils.h"
@@ -17,8 +14,14 @@
 #define COUNTDOWN_BASE 9
 #define USER_COUNTDOWN_LENGTH 3
 
+/*
+ *  Method for counting down from 3 before game starts.
+ */
 int run_countdown();
 
+/*
+ *  Method for rendering the countdown before the game starts.
+ */
 void render_countdown(int cur_countdown);
 
 #endif

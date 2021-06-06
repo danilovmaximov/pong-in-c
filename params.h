@@ -8,7 +8,7 @@
 #define BLACK 0x0000
 #define RED 0xF800
 #define WHITE 0xFFFF
-#define GREEN 0x07E0
+#define GREEN 0x0F0F
 #define BLUE 0x001F
 
 #endif

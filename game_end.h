@@ -12,7 +12,12 @@
 #define GREEN_RECT_Y 273
 #define GREEN_RECT_SIZE 10
 
-
+/*
+ *  Method for rendering results of the game (and celebrate a bit)
+ */
 void render_end_screen(int winner);
 
+/*
+ *  Method containg game's end screen logic (input, LED handling)
+ */
 void update_end_screen();

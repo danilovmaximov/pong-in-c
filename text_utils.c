@@ -1,5 +1,16 @@
 /*******************************************************************
-  text_utils.c  - upporting methods for work with text.
+  Game of pong in C for MZ_APO.
+
+  start.c  - main script
+  state_controller  - handling states' update and render, handling transitions between the states
+  text_utils.c  - supporting methods for the work with text.
+  periphery_utils.c  - supporting methods for the work with periphery.
+  menu.c  - rendering and handling the menu.
+  countdown.c  - countdown before the logic and render.
+  game.c  - game proccess.
+  pads.c  - the game's pads logic and render.
+  ball.c  - the game's ball logic and render.
+  game_end.c  - rendering game's end screen, it's logic.
 
   (C) Copyright 2021 by Danil Maksimov
   e-mail: maksidan@fel.cvut.cz
@@ -22,8 +33,11 @@
 
 unsigned short *fb;
 font_descriptor_t *fdes;
-int scale=4;
+int scale = 4;
 
+/*
+ *  Method for calculating char's width
+ */
 int char_width(int ch) 
 {
     int width;
@@ -39,9 +53,7 @@ int char_width(int ch)
 }
 
 /*
- *  Calculate string's width
- *  
- *  char *str  -  string, it's width is being calculated
+ *  Method for calculating string's width
  */
 int string_width(char *str) 
 {
@@ -56,7 +68,9 @@ int string_width(char *str)
     return result;
 }
 
-
+/*
+ *  Method for drawing a pixel on the display
+ */
 void draw_pixel(int x, int y, unsigned short color) 
 {
     if (x >= 0 && x < 480 && y >= 0 && y < 320) 
@@ -66,7 +80,7 @@ void draw_pixel(int x, int y, unsigned short color)
 }
 
 /*
- *  Regulate character's scale
+ *  Method for regulating character's scale
  */
 void draw_pixel_big(int x, int y, u_int16_t color, int scale) 
 {
@@ -81,7 +95,7 @@ void draw_pixel_big(int x, int y, u_int16_t color, int scale)
 }
 
 /*
- *  Draw a character on the display
+ *  Method for drawing a character on the display
  *
  *  int x, y  -  coordinates fo the upper left corner of the character
  *  char ch  -  the character or it's code from the font table
@@ -119,7 +133,7 @@ void draw_char(int x, int y, char ch, u_int16_t color, int scale)
 }
 
 /*
- *  Draw a string on the display
+ *  Method for drawing a string on the display
  *
  *  int x, y  -  coordinates of the upper left corner of the string
  *  char *str  -  the string to draw

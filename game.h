@@ -1,11 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <stdbool.h>
-
-#include "mzapo_parlcd.h"
-#include "mzapo_phys.h"
-#include "mzapo_regs.h"
 #include "text_utils.h"
 #include "params.h"
 #include "periphery_utils.h"
@@ -23,19 +18,26 @@
 #define SCORE_SCALE 5
 #define SCORE_WIDTH 18
 
-#define SCORE_AIM 5
+#define SCORE_AIM 3
 #define PLAYER_1 1
 #define PLAYER_2 2
 #define INIT_SCORE 0
 
 int p1_score, p2_score;
 
+/*
+ *  Method for running game's logic.
+ */
 void update_gamefield();
 
+/*
+ *  Method for rendering all game fields's elements
+ */
 void render_gamefield();
 
-void render_score();
-
+/*
+ *  Method for incrementing player's score  
+ */
 void update_score(int side);
 
 #endif

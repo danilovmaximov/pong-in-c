@@ -1,11 +1,6 @@
 #ifndef MENU_H
 #define MENU_H
 
-#include <stdbool.h>
-
-#include "mzapo_parlcd.h"
-#include "mzapo_phys.h"
-#include "mzapo_regs.h"
 #include "text_utils.h"
 #include "params.h"
 #include "periphery_utils.h"
@@ -19,10 +14,19 @@
 #define MENU_Y_OFFSET 180
 #define MENU_TEXT_SCALE 2
 
+/*
+ *  Method contating main menu's logic
+ */
 void update_menu();
 
+/*
+ *  Method for rendering the line which underlines player's button choice in the menu
+ */
 void render_menu();
 
+/*
+ *  Method for initializing menu's variables
+ */
 void init_menu();
 
 #endif

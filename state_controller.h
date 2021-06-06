@@ -12,16 +12,24 @@
 #include "periphery_utils.h"
 #include "countdown.h"
 #include "game.h"
+#include "game_end.h"
 
-int state, scale;
-bool in_state_transition;
+// Game's current state
+int state;
 
 int winner;
 
-struct timespec delay;
-
+/*
+ *  Main game's update method
+ */
 void update(int* state);
 
+/*
+ *  Main game's render method
+ */
 void render(int* state);
 
+/*
+ *  Method for quitting the game, turns off periphery
+ */
 void quit();

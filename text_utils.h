@@ -1,12 +1,3 @@
-/*******************************************************************
-  text_utils.h  - upporting methods for work with text.
-
-  (C) Copyright 2021 by Danil Maksimov
-  e-mail: maksidan@fel.cvut.cz
-  license: any combination of GPL, LGPL, MPL or BSD licenses
-
- *******************************************************************/
-
 #ifndef TEXT_UTILS_H
 #define TEXT_UTILS_H
 

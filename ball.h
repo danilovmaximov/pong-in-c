@@ -1,16 +1,7 @@
 #ifndef BALL_H
 #define BALL_H
 
-#include <stdbool.h>
-
-#include "mzapo_parlcd.h"
-#include "mzapo_phys.h"
-#include "mzapo_regs.h"
-#include "text_utils.h"
-#include "params.h"
 #include "periphery_utils.h"
-#include "game_states.h"
-#include "state_controller.h"
 #include "pads.h"
 #include "game.h"
 
@@ -28,10 +19,14 @@
 #define LEFT_OUT_OF_BOUNDS 4
 #define RIGHT_OUT_OF_BOUNDS 5
 
+/*
+ *  Method for updating the ball's state and position.
+ */
 void update_ball();
 
+/*
+ *  Method for rendering the ball in the game.
+ */
 void render_ball();
-
-void reset_ball();
 
 #endif
