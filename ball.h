@@ -2,6 +2,7 @@
 #define BALL_H
 
 #include "periphery_utils.h"
+#include "text_utils.h"
 #include "pads.h"
 #include "game.h"
 

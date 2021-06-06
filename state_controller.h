@@ -9,7 +9,6 @@
 
 #include "game_states.h"
 #include "menu.h"
-#include "periphery_utils.h"
 #include "countdown.h"
 #include "game.h"
 #include "game_end.h"

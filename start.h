@@ -8,12 +8,7 @@
 #include <unistd.h>
 #include <stdbool.h>
 
-#include "menu.h"
-#include "params.h"
-#include "game_states.h"
 #include "state_controller.h"
-#include "periphery_utils.h"
-#include "text_utils.h"
 #include "font_types.h"
 #include "mzapo_parlcd.h"
 #include "mzapo_phys.h"

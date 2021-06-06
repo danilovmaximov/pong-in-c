@@ -1,9 +1,6 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include "text_utils.h"
-#include "params.h"
-#include "periphery_utils.h"
 #include "game_states.h"
 #include "state_controller.h"
 #include "pads.h"
@@ -18,7 +15,7 @@
 #define SCORE_SCALE 5
 #define SCORE_WIDTH 18
 
-#define SCORE_AIM 3
+#define SCORE_AIM 5
 #define PLAYER_1 1
 #define PLAYER_2 2
 #define INIT_SCORE 0
