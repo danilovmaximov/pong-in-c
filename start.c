@@ -64,12 +64,6 @@ void display_init()
     }
 }
 
-void delay_init() 
-{
-    delay.tv_sec = 0;
-    delay.tv_nsec = 17 * 1000 * 1000;
-}
-
 /*
  *  Method for initializing knobs, LED line and LED RGB
  */
@@ -93,7 +87,6 @@ void periphery_init()
  */
 void init()
 {
-    delay_init();
     display_init();
     periphery_init();
     init_led_run_light();
@@ -114,6 +107,5 @@ int main(int argc, char *argv[])
         render(&state);
 
         if (knob_pressed == FORSE_QUIT) quit();
-        clock_nanosleep(CLOCK_MONOTONIC, 0, &delay, NULL);
     }    
 }

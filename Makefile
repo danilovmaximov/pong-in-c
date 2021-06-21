@@ -1,5 +1,5 @@
-#CC = arm-linux-gnueabihf-gcc
-CC = gcc
+CC = arm-linux-gnueabihf-gcc
+#CC = gcc
 CXX = arm-linux-gnueabihf-g++
 
 CPPFLAGS = -I .
@@ -16,7 +16,7 @@ ifeq ($(TARGET_IP),)
 ifneq ($(filter debug run,$(MAKECMDGOALS)),)
 $(warning The target IP address is not set)
 $(warning Run as "TARGET_IP=192.168.202.xxx make run" or modify Makefile)
-TARGET_IP ?= 192.168.202.xxx
+TARGET_IP ?= 192.168.202.203
 endif
 endif
 TARGET_DIR ?= /tmp/$(shell whoami)
